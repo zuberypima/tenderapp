@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
-
+{% load static %}
 <head>
     <title>HomePage</title>
     <meta charset="UTF-8">
@@ -18,29 +17,29 @@
             <div class="drop-div">
                 <li><a href="#home">Setup</a></li>
                 <div class="dropdown-content">
-                    <a href="{% url 'vendorreg' %}">Register as supplier</a>
-                    <a href="{% url 'tenderreg' %}">Register Tender</a>
-                    <a href="manageclient.html">Manage Client</a>
-                    <a href="clientproperties.html">Manage Properties</a>
+                    <a href="#">Register as Supllier</a>
+                    <a href="#">Register as Client</a>
+                    <!-- <a href="manageclient.html">Manage Client</a> -->
+                    <a href="client">Forget Pasword</a>
                 </div>
             </div>
             <div class="drop-div">
                 <li><a href="#home">Tenders</a></li>
                 <div class="dropdown-content">
-                    <a href="{% url 'tenders' %}">All Tenders</a>
-                    <a href="#">Opend to Bid Tenders</a>
-                    <a href="#">Awarded Tenders</a>
-                    <a href="#">Evaluated Tenders</a>
-                  
+                    <a href="createbooking.html">Awarded Tenders</a>
+                    <!-- <a href="#">Compose New Booking</a> -->
+                    <a href="viewtender.html">Current Tenders</a>
+                    <a href="#">Tenders of Opened Bids</a>
+                    <!-- <a href="#">Booking by Day</a> -->
                 </div>
             </div>
             <div class="drop-div">
-                <li><a href="#home">Accounts</a></li>
+                <li><a href="#home">About </a></li>
                 <div class="dropdown-content">
-                    <a href="bookingstoinvoice.html">View Booking to Invoice</a>
+                    <!-- <a href="bookingstoinvoice.html">View Booking to Invoice</a>
                     <a href="#">Invoice Book</a>
                     <a href="#">Reciept Book</a>
-                    <a href="#">Credit Notes</a>
+                    <a href="#">Credit Notes</a> -->
                 </div>
             </div>
             <div class="drop-div">
@@ -73,38 +72,90 @@
     <!--Bars to desplay detais of bookings-->
     <div class="dash-container">
         <!-- Sub Container one for Provisiona Bookings -->
-        <a href=" {% url 'tenders' %}">
-            <div class="sub-container-1">
-                <div class="min-container-1">
-                    <p>100</p>
-                    <p>Current Tenders</p>
-                </div>
-                <i class="fa-solid fa-person-circle-exclamation"></i>
+        <div class="sub-container-1">
+            <div class="min-container-1">
+                <p>100</p>
+                <p>Current Tenders</p>
             </div>
-        </a>
-       
+            <i class="fa-solid fa-person-circle-exclamation"></i>
+        </div>
         <!-- Sub Container one for Confirmed Bookings -->
-       <a href="{% url 'tenders' %}">
         <div class="sub-container-2">
             <div class="min-container-2">
                 <p>100</p>
-                <p>Awarded Tenders</p>
+                <p>Awarded Contracts</p>
             </div>
             <i class="fa-solid fa-person-circle-check"></i>
         </div>
-       </a>
 
-        <a href="{% url 'tenders' %}">
-            <div class="sub-container-2">
-                <div class="min-container-2">
-                    <p>100</p>
-                    <p>Open to Bid</p>
-                </div>
-                <i class="fa-solid fa-person-circle-check"></i>
+        <div class="sub-container-2">
+            <div class="min-container-2">
+                <p>100</p>
+                <p>Awarded Contracts</p>
             </div>
-        </a>
-
+            <i class="fa-solid fa-person-circle-check"></i>
+        </div>
     </div>
+    <hr>
+    <div class="category">
+        <p>Categories</p>
+        <div class="sub-category">
+            <a href="">
+                <div class="sub-box">
+                    <p>Air Condition Service (4)</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="sub-box">
+                    <p>Cleaning Sanitation (5)</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="sub-box">
+                    <p>Construction Buildings (14)</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="sub-box">
+                    <p>Debt Collection Service (1)</p>
+                </div>
+            </a>
+            {% comment %} <a href="">
+                <div class="sub-box">
+                    <p>Fire Fighting (5)</p>
+                </div>
+            </a> {% endcomment %}
+            <a href="">
+                <div class="sub-box">
+                    <p>Generator Services (2)</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="sub-box">
+                    <p>Goods And Services (41)</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="sub-box">
+                    <p>Ict Internet Telecom (22)</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="sub-box">
+                    <p>Motor Vehicles And Fuel (9)</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="sub-box">
+                    <p>Printing And Stationeries (10)</p>
+                </div>
+            </a>
+        </div>
+
+        
+    </div>
+    
+
 </body>
 
 </html>

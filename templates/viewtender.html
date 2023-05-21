@@ -37,28 +37,27 @@
                 <th>Descriptions</th>
                 <th>Proqurement Method</th>
                 <th>Bids Submission Deadline</th>
-                <th>Deadline</th>
-                <th> #######</th>
+                <th>Status<th>
                 <th> #######</th>
                 <th>#######</th>
-                <th> #######    </th>
                 <th> #######</th>
-                <th> Status</th>
+                <th> #######</th>     
             </tr>
            {% for tender in tenders  %}
            <tr >
             <td>{{tender.tenderid}}</td>
-            <td>Client One</td>
-            <td>Descriptions of the tender</td>
-            <td>Proqurement Method</td>
-            <td>11/02/2023</td>
+            <td>{{tender.cliendName}}</td>
+            <td>{{tender.description}}</td>
+            <td>{{tender.procure_method}}</td>
             <td>{{tender.deadLineDate}}</td>
             <td> #######</td>
             <td> #######</td>
             <td>#######</td>
-            <td> #######  </td>
+            <td> ####### </td>
             <td> #######</td>
-            <td>Evaluation</td>
+            <td>
+            <button>View</button>
+            </td>
         </tr>
            {% endfor %}
     </table>

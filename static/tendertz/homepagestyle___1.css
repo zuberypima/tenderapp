@@ -43,9 +43,9 @@ ul {
 .app-name {
     display: inline;
     font-size: Arial;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: red;
+    color: rgb(255, 165, 0);
     padding-right: 20px;
 
 }
@@ -93,10 +93,12 @@ a {
 
 /* Bars to desplay detais of bookings */
 .dash-container {
-    height: 150px;
+    height: 300px;
     margin-top: 40px;
     padding-top: 30px;
-
+    /* border: 10px solid black; */
+    /* border-radius: 90px; */
+    /* background-color: grey; */
     text-align: center;
 }
 
@@ -149,26 +151,3 @@ a {
     color: white;
 }
 
-
-.category p{
-    text-align: center;
-    font-size: 30px;
-} 
-.sub-category{
-    margin: 10px;
-}
-.sub-box{
-    background-color: rgba(128, 128, 128, 0.514);
-    display: inline-block;
-    width: fit-content;
-    border: 1px solid  rgba(128, 128, 128, 0.514);
-    border-radius: 5px;
-  margin: 5px;
-    
-}
-.sub-box p{
-  font-size: 22px;
-  margin: 5px;
-  color: black;
-  
-}

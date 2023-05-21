@@ -1,10 +1,17 @@
 from django.db import models
-from procoficer.models import CreateCond
+from procoficer.models import CreateCond,ClientDetail
 # Create your models here.
 #CreateCond
 
+class Category(models.Model):
+    name =models.CharField(max_length=255, unique= True)
+
+    def __str__(self):
+        return self.name
+
 class TenderReg(models.Model):
     tenderid = models.CharField(max_length=255)
+    cliendName =models.ForeignKey(ClientDetail,on_delete=models.CASCADE)
     description = models.TextField(blank=True)
     clinteId = models.CharField(max_length=255, blank=True, null=True)
     deadLineDate = models.DateField()
@@ -17,7 +24,8 @@ class TenderReg(models.Model):
     # ]
     # tender_status = models.CharField(max_length=255,choices=STATU_TYPE)
     financial_value = models.CharField(max_length=255)
-    category = models.CharField(max_length=255)
+  
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     def __str__(self):
         return self.tenderid
 
