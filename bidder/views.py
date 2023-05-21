@@ -10,3 +10,7 @@ def vendorreg(request):
     else:
         form=Regform()
     return render(request, 'vendorregform.html',{'form':form})
+
+
+def vendorhome(request):
+    return render(request, 'vendor.html')

@@ -10,3 +10,8 @@ def homepage(request):
 
 def tenders(request):
     return render(request, 'viewtender.html')
+
+def procurementofficer(request):
+    return render(request, 'procurementofficer.html')
+
+

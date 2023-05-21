@@ -21,3 +21,4 @@ def tenders_list(request):
     tenders=TenderReg.objects.all()
 
     return render(request, 'viewtender.html',{'tenders':tenders})
+
