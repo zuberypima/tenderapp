@@ -5,7 +5,7 @@ urlpatterns = [
     path('homepage',homepage,name='homepage'),
     path('procurementofficer',procurementofficer,name='procurementofficer'),
     path('regaclient', regClient,name='regaclient'),
-    path('requirement',requireds, name='requirement'),
+    path('application',requireds, name='application'),
  
     # path('tenders',tenders,name='tenders')
 ]

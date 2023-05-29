@@ -23,7 +23,6 @@ class Condition (models.Model):
 class Requirement(models.Model):
     conditionseted =models.OneToOneField(Condition,on_delete=models.CASCADE)
     requirement =models.CharField(max_length=255)
-
     def __str__(self):
         return self.requirement
     

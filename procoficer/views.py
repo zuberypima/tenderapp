@@ -34,4 +34,4 @@ def regClient(request):
 
 def requireds(request):
     conditions = Condition.objects.all()
-    return render(request,'requirement.html',{'conditions':conditions})
+    return render(request,'application.html',{'conditions':conditions})
