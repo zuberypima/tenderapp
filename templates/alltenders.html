@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'tendertz/viewtender.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="booking-id">
+        <p>Tenders of Opened Bids</p>
+    </div>
+   <div class="status-contain">
+    <table >
+        <tr>
+            <td class="status-1">BBB</td>
+            <td class="status-txt">Open Tender</td>  
+        </tr>
+        <tr>
+            <td class="status-2">BBB</td>
+            <td class="status-txt">Awarded</td>
+        </tr>
+       <tr>
+        <td  class="status-3">BBB</td>
+        <td class="status-txt">Evaluation</td>
+       </tr>
+    </table>
+   </div>
+
+    <table>
+            <!-- <div class=" space-div"></div> -->
+            <tr >
+                <th>Tender No</th>
+                <th>Client Name</th>
+                <th>Descriptions</th>
+                <th>Proqurement Method</th>
+                <th>Bids Submission Deadline</th>
+                <th>Status<th>
+                <th> #######</th>
+                <th>#######</th>
+                <th> #######</th>
+                <th> #######</th>     
+            </tr>
+           {% for tender in tenders  %}
+           <tr >
+            <td>{{tender.tenderid}}</td>
+            <td>{{tender.cliendName}}</td>
+            <td>{{tender.description}}</td>
+            <td>{{tender.procure_method}}</td>
+            <td>{{tender.deadLineDate}}</td>
+            <td> #######</td>
+            <td> #######</td>
+            <td>#######</td>
+            <td> ####### </td>
+            <td> #######</td>
+            <td>
+            <button>View</button>
+            </td>
+        </tr>
+           {% endfor %}
+    </table>
+
+
+    </div>
+</body>
+
+</html>

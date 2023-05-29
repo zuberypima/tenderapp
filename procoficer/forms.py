@@ -1,9 +1,7 @@
 from django import forms
-from .models import BidderReg
+from .models import ClientDetail
 
 class Regform(forms.ModelForm):
     class Meta:
-        model = BidderReg
-        fields = ['companyName','tinNo','companyRegNo','vatNo',
-                  'location', 'region','dictrict','phone','email',
-                  'website', 'business','category', 'foreignInput','employeeNum']
+        model = ClientDetail
+        fields =['idNo','orgName','orgCategory']

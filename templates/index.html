@@ -17,8 +17,8 @@
             <div class="drop-div">
                 <li><a href="#home">Setup</a></li>
                 <div class="dropdown-content">
-                    <a href="#">Register as Supllier</a>
-                    <a href="#">Register as Client</a>
+                    <a href="{% url 'vendorreg' %}">Register as supplier</a>
+                    <a href="{% url 'regaclient' %}">Register as Client</a>
                     <!-- <a href="manageclient.html">Manage Client</a> -->
                     <a href="client">Forget Pasword</a>
                 </div>
@@ -27,7 +27,7 @@
                 <li><a href="#home">Tenders</a></li>
                 <div class="dropdown-content">
                     <a href="createbooking.html">Awarded Tenders</a>
-                    <!-- <a href="#">Compose New Booking</a> -->
+                    <a href="{% url 'tenderreg' %}">Create new Tender</a>
                     <a href="viewtender.html">Current Tenders</a>
                     <a href="#">Tenders of Opened Bids</a>
                     <!-- <a href="#">Booking by Day</a> -->
@@ -61,24 +61,26 @@
                 </div>
             </div>
         </ul>
-        <ul class="navbar-two">
+        {% comment %} <ul class="navbar-two">
             <li><a href="#home">Dashboard_name</a></li>
             <li><a href="#help">Help</a></li>
             <li><a href="#user">User Name</a></li>
-        </ul>
+        </ul> {% endcomment %}
     </div>
 
 
     <!--Bars to desplay detais of bookings-->
     <div class="dash-container">
         <!-- Sub Container one for Provisiona Bookings -->
-        <div class="sub-container-1">
-            <div class="min-container-1">
-                <p>100</p>
-                <p>Current Tenders</p>
+        <a href=" {% url 'tenders' %}">
+            <div class="sub-container-1">
+                <div class="min-container-1">
+                    <p>100</p>
+                    <p>Current Tenders</p>
+                </div>
+                <i class="fa-solid fa-person-circle-exclamation"></i>
             </div>
-            <i class="fa-solid fa-person-circle-exclamation"></i>
-        </div>
+        </a>
         <!-- Sub Container one for Confirmed Bookings -->
         <div class="sub-container-2">
             <div class="min-container-2">
@@ -120,11 +122,6 @@
                     <p>Debt Collection Service (1)</p>
                 </div>
             </a>
-            {% comment %} <a href="">
-                <div class="sub-box">
-                    <p>Fire Fighting (5)</p>
-                </div>
-            </a> {% endcomment %}
             <a href="">
                 <div class="sub-box">
                     <p>Generator Services (2)</p>

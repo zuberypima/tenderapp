@@ -1,0 +1,57 @@
+body {
+    background-color: azure;
+}
+.client-details{
+    padding-bottom: 20px;
+}
+.client-details h3{
+display: inline;
+}
+
+.client-details p{
+    display: inline;
+    }
+
+.description{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.description h3{
+    background-color: aquamarine;
+}
+.deadline{
+    padding-top: 20px;
+}
+
+.deadline h3,p {
+ display: inline;
+}
+
+.status h3,p{
+    display: inline;
+}
+
+.status p{
+    background-color: green;
+}
+
+
+.conditions{
+padding-top: 10px;
+width: max-content;
+width:90%;
+
+}
+.conditions label{
+    font-weight: 600;
+}
+.conditions input{
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 25px;
+    width:80%;
+    padding: auto;
+}

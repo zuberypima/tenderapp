@@ -20,5 +20,15 @@ def tenderreg(request):
 def tenders_list(request):
     tenders=TenderReg.objects.all()
 
-    return render(request, 'viewtender.html',{'tenders':tenders})
+    return render(request, 'alltenders.html',{'tenders':tenders})
 
+
+
+def viewtender(request):
+    tender=TenderReg.objects.all()
+    return render(request, 'viewtender.html',{'tender':tender})
+
+
+
+def applytender(request):
+    return render(request, 'application.html')
