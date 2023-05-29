@@ -10,7 +10,7 @@ class Category(models.Model):
         return self.name
 
 class TenderReg(models.Model):
-    tenderid = models.CharField(max_length=255)
+    tenderid = models.CharField(max_length=255,primary_key=True)
     cliendName =models.ForeignKey(ClientDetail,on_delete=models.CASCADE)
     description = models.TextField(blank=True)
     clinteId = models.CharField(max_length=255, blank=True, null=True)

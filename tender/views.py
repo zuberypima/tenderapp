@@ -24,8 +24,8 @@ def tenders_list(request):
 
 
 
-def viewtender(request):
-    tender=TenderReg.objects.all()
+def viewtender(request,pk):
+    tender=TenderReg.objects.get(tenderid=pk)
     return render(request, 'viewtender.html',{'tender':tender})
 
 
